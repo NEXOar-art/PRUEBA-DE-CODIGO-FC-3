@@ -29,17 +29,9 @@ a{text-decoration:none;color:inherit}
 .header-main{max-width:1200px;margin:auto;height:94px;display:flex;align-items:center;gap:28px;padding:0 22px}
 .logo{font-weight:950;font-style:italic;font-size:30px;letter-spacing:-2px;white-space:nowrap}
 .logo span{color:var(--red)}
-.search{height:44px;flex:1;display:flex;border:1px solid #bbb;border-radius:3px;overflow:hidden;position:relative}
+.search{height:44px;flex:1;display:flex;border:1px solid #bbb;border-radius:3px;overflow:hidden}
 .search input{border:0;outline:0;padding:0 16px;flex:1;font-size:14px}
 .search button{width:52px;border:0;background:#111;color:#fff;cursor:pointer}
-.search-suggestions{position:absolute;top:100%;left:0;right:0;background:#fff;border:1px solid #ddd;border-top:0;max-height:400px;overflow-y:auto;display:none;z-index:100;box-shadow:0 4px 8px rgba(0,0,0,.1)}
-.search-suggestions.active{display:block}
-.suggestion-item{padding:12px 16px;cursor:pointer;border-bottom:1px solid #f5f5f5;transition:.2s}
-.suggestion-item:hover{background:#f9f9f9}
-.suggestion-item:last-child{border-bottom:0}
-.suggestion-title{font-weight:700;font-size:13px;margin-bottom:3px}
-.suggestion-meta{font-size:11px;color:#666}
-.suggestion-match{background:#fff3cd;padding:1px 3px;border-radius:2px}
 .header-actions{display:flex;gap:20px;font-size:13px;align-items:center}
 .cart-btn{position:relative;border:0;background:transparent;cursor:pointer;font-size:14px}
 .badge{position:absolute;top:-9px;right:-12px;background:var(--red);color:#fff;border-radius:50%;font-size:10px;min-width:18px;height:18px;display:grid;place-items:center}
@@ -69,19 +61,24 @@ url("https://images.unsplash.com/photo-1504215680853-026ed2a45def?auto=format&fi
 .section-title{display:flex;align-items:center;justify-content:space-between;margin-bottom:25px;flex-wrap:wrap;gap:15px}
 .section-title h2{margin:0;font-size:24px;font-style:italic;font-weight:950}
 .more{background:var(--red);color:#fff;padding:7px 14px;font-weight:900;font-style:italic;border:0;cursor:pointer}
-.advanced-filters{background:#f9f9f9;border:1px solid #e5e5e5;border-radius:8px;padding:20px;margin-bottom:25px}
-.filter-section{margin-bottom:20px}
+.smart-filters{background:#f9f9f9;border:1px solid #e0e0e0;border-radius:8px;padding:20px;margin-bottom:20px}
+.filter-section{margin-bottom:15px}
 .filter-section:last-child{margin-bottom:0}
-.filter-section h3{font-size:14px;margin:0 0 12px;color:#333;display:flex;align-items:center;gap:8px}
-.filter-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:12px}
-.filter-select{padding:10px 12px;border:1px solid #ddd;border-radius:6px;font-size:13px;width:100%;background:#fff;cursor:pointer;transition:.2s}
-.filter-select:hover{border-color:var(--red)}
-.filter-select:focus{outline:0;border-color:var(--red);box-shadow:0 0 0 3px rgba(239,17,17,.1)}
-.active-filters{display:flex;flex-wrap:wrap;gap:8px;margin-top:15px;padding-top:15px;border-top:1px solid #e5e5e5}
-.active-filter-tag{background:var(--red);color:#fff;padding:6px 12px;border-radius:20px;font-size:11px;display:flex;align-items:center;gap:6px}
-.active-filter-tag button{background:none;border:0;color:#fff;cursor:pointer;font-size:14px;padding:0;width:16px;height:16px;line-height:1}
-.clear-filters{background:#666;color:#fff;border:0;padding:8px 16px;border-radius:6px;cursor:pointer;font-size:12px;font-weight:700;margin-top:10px}
-.clear-filters:hover{background:#555}
+.filter-label{font-size:11px;font-weight:700;color:var(--muted);text-transform:uppercase;margin-bottom:8px;display:block}
+.filter-row{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+.filter-chip{background:#fff;border:1px solid #ddd;padding:6px 12px;border-radius:20px;font-size:12px;cursor:pointer;transition:.3s;user-select:none}
+.filter-chip:hover{border-color:var(--red);color:var(--red)}
+.filter-chip.active{background:var(--red);color:#fff;border-color:var(--red)}
+.search-suggestions{position:absolute;top:100%;left:0;right:0;background:#fff;border:1px solid #ddd;border-top:0;max-height:400px;overflow-y:auto;z-index:100;display:none;box-shadow:0 4px 8px rgba(0,0,0,.1)}
+.search-suggestions.active{display:block}
+.suggestion-item{padding:12px 16px;cursor:pointer;border-bottom:1px solid #f0f0f0}
+.suggestion-item:hover{background:#f9f9f9}
+.suggestion-item:last-child{border-bottom:0}
+.suggestion-title{font-weight:700;font-size:13px;margin-bottom:3px}
+.suggestion-meta{font-size:11px;color:var(--muted)}
+.active-filters{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:15px}
+.active-filter-tag{background:var(--red);color:#fff;padding:4px 10px;border-radius:15px;font-size:11px;display:flex;align-items:center;gap:5px}
+.active-filter-tag button{background:none;border:0;color:#fff;cursor:pointer;font-size:14px;padding:0;width:16px;height:16px;display:grid;place-items:center}
 .products-wrap{position:relative}
 .products{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:24px}
 .product{border:1px solid #ccc;background:#fff;min-width:0;position:relative;padding:9px 12px 13px;display:flex;flex-direction:column;min-height:385px;transition:.3s}
@@ -94,7 +91,8 @@ url("https://images.unsplash.com/photo-1504215680853-026ed2a45def?auto=format&fi
 .product h3{font-size:11px;line-height:1.3;margin:3px 0 2px;text-transform:uppercase;min-height:28px}
 .code{font-size:10px;color:#777;margin-bottom:6px}
 .brand-tag{font-size:9px;color:var(--red);font-weight:700;margin-bottom:8px}
-.product-attrs{font-size:9px;color:#666;margin-bottom:8px;line-height:1.4}
+.product-attrs{display:flex;gap:4px;flex-wrap:wrap;margin-bottom:8px}
+.product-attr{background:#f0f0f0;padding:2px 6px;border-radius:3px;font-size:9px}
 .price{font-size:15px;font-weight:800;margin-top:auto;padding:7px 0;color:var(--green)}
 .stock-info{font-size:10px;color:var(--muted);margin-bottom:5px}
 .stock-info.low{color:var(--red)}
@@ -148,7 +146,6 @@ footer{background:#080808;color:#fff;margin-top:45px;padding:40px 20px}
 .overlay.active{display:block}
 .loading{text-align:center;padding:40px;font-size:16px;color:var(--muted)}
 .no-results{text-align:center;padding:60px 20px;color:var(--muted);font-size:18px}
-.results-count{font-size:13px;color:#666;font-weight:400}
 @media(max-width:1000px){.products{grid-template-columns:repeat(3,1fr)}.brands{gap:20px}.footer-inner{grid-template-columns:1fr 1fr}}
 @media(max-width:650px){
  .header-main{height:auto;padding:14px;flex-wrap:wrap}.logo{font-size:25px}.search{order:3;flex-basis:100%}
@@ -156,7 +153,7 @@ footer{background:#080808;color:#fff;margin-top:45px;padding:40px 20px}
  .hero{height:240px}.hero-content{padding:15px}.hero-copy{max-width:245px}.hero-copy h1{font-size:18px}
  .hero-products{display:none}.products{grid-template-columns:repeat(2,1fr);gap:10px}.product{min-height:360px}
  .side-arrow{display:none}.liquidation{grid-template-columns:1fr}.cat-grid{grid-template-columns:repeat(2,1fr)}
- .cart-panel{width:100%;right:-100%}.cart-panel.open{right:0}.filter-grid{grid-template-columns:1fr}
+ .cart-panel{width:100%;right:-100%}.cart-panel.open{right:0}.smart-filters{padding:15px}
 }
 </style>
 </head>
@@ -178,9 +175,9 @@ footer{background:#080808;color:#fff;margin-top:45px;padding:40px 20px}
 <header class="header">
   <div class="header-main">
     <div class="logo">FC <span>RACING</span></div>
-    <div class="search">
-      <input id="search" placeholder="Buscar por producto, código, marca, categoría, modelo, año...">
-      <button onclick="filterProducts()"><i class="fas fa-search"></i></button>
+    <div class="search" style="position:relative">
+      <input id="search" placeholder="Buscar por producto, código, marca, modelo de moto, año, color...">
+      <button onclick="performSearch()"><i class="fas fa-search"></i></button>
       <div class="search-suggestions" id="searchSuggestions"></div>
     </div>
     <div class="header-actions">
@@ -226,68 +223,16 @@ footer{background:#080808;color:#fff;margin-top:45px;padding:40px 20px}
 <section class="section" id="novedades">
   <div class="section-title">
     <h2>NUESTROS PRODUCTOS</h2>
-    <div class="results-count" id="productCount"></div>
+    <div id="productCount"></div>
   </div>
   
-  <div class="advanced-filters">
+  <div class="smart-filters" id="smartFilters">
+    <div class="active-filters" id="activeFilters"></div>
     <div class="filter-section">
-      <h3><i class="fas fa-filter"></i> Filtros Principales</h3>
-      <div class="filter-grid">
-        <select class="filter-select" id="categoryFilter" onchange="filterProducts()">
-          <option value="">Todas las categorías</option>
-        </select>
-        <select class="filter-select" id="subcategoryFilter" onchange="filterProducts()">
-          <option value="">Todas las subcategorías</option>
-        </select>
-        <select class="filter-select" id="brandFilter" onchange="filterProducts()">
-          <option value="">Todas las marcas</option>
-        </select>
-        <select class="filter-select" id="familyFilter" onchange="filterProducts()">
-          <option value="">Todas las familias</option>
-        </select>
-      </div>
+      <span class="filter-label">Categoría</span>
+      <div class="filter-row" id="categoryFilters"></div>
     </div>
-    
-    <div class="filter-section">
-      <h3><i class="fas fa-motorcycle"></i> Compatibilidad</h3>
-      <div class="filter-grid">
-        <select class="filter-select" id="motoBrandFilter" onchange="filterProducts()">
-          <option value="">Marca de moto</option>
-        </select>
-        <select class="filter-select" id="motoModelFilter" onchange="filterProducts()">
-          <option value="">Modelo de moto</option>
-        </select>
-        <select class="filter-select" id="yearFilter" onchange="filterProducts()">
-          <option value="">Año de aplicación</option>
-        </select>
-      </div>
-    </div>
-    
-    <div class="filter-section">
-      <h3><i class="fas fa-tags"></i> Atributos del Producto</h3>
-      <div class="filter-grid">
-        <select class="filter-select" id="colorFilter" onchange="filterProducts()">
-          <option value="">Todos los colores</option>
-        </select>
-        <select class="filter-select" id="sizeFilter" onchange="filterProducts()">
-          <option value="">Todos los talles</option>
-        </select>
-        <select class="filter-select" id="terrainFilter" onchange="filterProducts()">
-          <option value="">Tipo de terreno</option>
-        </select>
-        <select class="filter-select" id="stockFilter" onchange="filterProducts()">
-          <option value="">Disponibilidad</option>
-          <option value="in">En stock</option>
-          <option value="low">Stock bajo</option>
-          <option value="out">Sin stock</option>
-        </select>
-      </div>
-    </div>
-    
-    <div class="active-filters" id="activeFilters" style="display:none"></div>
-    <button class="clear-filters" id="clearFiltersBtn" onclick="clearAllFilters()" style="display:none">
-      <i class="fas fa-times"></i> Limpiar todos los filtros
-    </button>
+    <div class="filter-section" id="dynamicFilters"></div>
   </div>
 
   <div class="products-wrap">
@@ -380,8 +325,8 @@ footer{background:#080808;color:#fff;margin-top:45px;padding:40px 20px}
 let allProducts = [];
 let filteredProducts = [];
 let cart = [];
+let activeFilters = {};
 const WHATSAPP_NUMBER = '3543546389';
-let searchTimeout = null;
 
 // Formatear número como moneda
 const money = n => n.toLocaleString("es-AR", {minimumFractionDigits: 2, maximumFractionDigits: 2});
@@ -389,18 +334,19 @@ const money = n => n.toLocaleString("es-AR", {minimumFractionDigits: 2, maximumF
 // Parsear precio del formato "383447,99" a número
 function parsePrice(priceStr) {
   if (!priceStr) return 0;
-  const clean = String(priceStr).replace('$', '').replace(/\./g, '').replace(',', '.').trim();
+  const clean = priceStr.replace(/\./g, '').replace(',', '.').trim();
   return parseFloat(clean) || 0;
 }
 
 // Cargar productos desde Google Sheets
 async function loadProducts() {
   try {
-    const response = await fetch('https://docs.google.com/spreadsheets/d/11UhNr4Ywi1Xb6UrPkrzqYshnnqSdqMjp8xDw-dLqgNY/export?format=csv');
+    const response = await fetch('https://docs.google.com/spreadsheets/d/1-6YzmuFi9fXiQErHVCO8tLmyiv5-7HjCmyYpfRv43Lk/export?format=csv');
     const csvData = await response.text();
     
+    // Parsear CSV
     const rows = csvData.split('\n');
-    const headers = parseCSVRow(rows[0]);
+    const headers = rows[0].split(',').map(h => h.trim());
     
     allProducts = [];
     
@@ -408,7 +354,7 @@ async function loadProducts() {
       if (!rows[i].trim()) continue;
       
       const values = parseCSVRow(rows[i]);
-      if (values.length < 9) continue;
+      if (values.length < headers.length) continue;
       
       const product = {
         categoria: values[0] || '',
@@ -421,41 +367,43 @@ async function loadProducts() {
         stock: parseInt(values[7]) || 0,
         imagen: values[8] || '',
         familia: values[9] || '',
-        aplicacionModelo: values[10] || '',
-        añosAplicacion: values[11] || '',
-        talle: values[12] || '',
+        aplicacion: values[10] || '',
         color: values[13] || '',
+        talle: values[12] || '',
         terreno: values[14] || '',
         posicion: values[15] || '',
         rodado: values[16] || '',
         medida: values[17] || '',
-        tipoCubierta: values[18] || '',
-        material: values[35] || '',
-        marcaMoto: values[25] || '',
-        modeloMoto: values[26] || '',
-        añoDesde: values[28] || '',
-        añoHasta: values[29] || '',
-        compatibilidad: values[47] || '',
-        searchIndex: ''
+        material: values[31] || '',
+        marcaMoto: values[24] || '',
+        modeloMoto: values[25] || '',
+        añoDesde: values[26] || '',
+        añoHasta: values[27] || '',
+        tipoProducto: values[44] || '',
+        // Campos de búsqueda enriquecidos
+        searchText: ''
       };
       
-      // Crear índice de búsqueda completo
-      product.searchIndex = [
+      // Crear campo de búsqueda enriquecido
+      product.searchText = [
         product.producto,
-        product.codigo,
         product.descripcion,
+        product.codigo,
         product.marca,
         product.categoria,
         product.subcategoria,
         product.familia,
-        product.aplicacionModelo,
+        product.aplicacion,
         product.color,
         product.talle,
         product.terreno,
+        product.posicion,
+        product.rodado,
+        product.medida,
         product.material,
         product.marcaMoto,
         product.modeloMoto,
-        product.compatibilidad
+        product.tipoProducto
       ].join(' ').toLowerCase();
       
       if (product.producto && product.codigo) {
@@ -464,7 +412,7 @@ async function loadProducts() {
     }
     
     filteredProducts = [...allProducts];
-    initializeFilters();
+    initializeSmartFilters();
     renderProducts();
     renderCategories();
     
@@ -474,7 +422,7 @@ async function loadProducts() {
   }
 }
 
-// Parsear fila CSV
+// Parsear fila CSV manejando comas dentro de comillas
 function parseCSVRow(row) {
   const result = [];
   let current = '';
@@ -497,23 +445,15 @@ function parseCSVRow(row) {
   return result;
 }
 
-// Inicializar filtros dinámicos
-function initializeFilters() {
-  const categories = [...new Set(allProducts.map(p => p.categoria).filter(c => c))].sort();
-  const brands = [...new Set(allProducts.map(p => p.marca).filter(m => m))].sort();
-  const families = [...new Set(allProducts.map(p => p.familia).filter(f => f))].sort();
-  const colors = [...new Set(allProducts.map(p => p.color).filter(c => c))].sort();
-  const sizes = [...new Set(allProducts.map(p => p.talle).filter(t => t))].sort();
-  const terrains = [...new Set(allProducts.map(p => p.terreno).filter(t => t))].sort();
-  const motoBrands = [...new Set(allProducts.map(p => p.marcaMoto).filter(m => m))].sort();
+// Inicializar filtros inteligentes
+function initializeSmartFilters() {
+  const categories = [...new Set(allProducts.map(p => p.categoria).filter(c => c))];
   
-  populateSelect('categoryFilter', categories);
-  populateSelect('brandFilter', brands);
-  populateSelect('familyFilter', families);
-  populateSelect('colorFilter', colors);
-  populateSelect('sizeFilter', sizes);
-  populateSelect('terrainFilter', terrains);
-  populateSelect('motoBrandFilter', motoBrands);
+  // Renderizar filtros de categoría
+  const categoryFilters = document.getElementById('categoryFilters');
+  categoryFilters.innerHTML = categories.sort().map(cat => 
+    `<div class="filter-chip" data-filter="categoria" data-value="${cat}" onclick="toggleFilter(this)">${cat}</div>`
+  ).join('');
   
   // Crear menú de navegación
   const navMenu = document.getElementById('navMenu');
@@ -523,267 +463,153 @@ function initializeFilters() {
     link.href = '#';
     link.onclick = (e) => {
       e.preventDefault();
-      document.getElementById('categoryFilter').value = cat;
-      filterProducts();
+      applyFilter('categoria', cat);
       updateNavActive(link);
     };
     navMenu.appendChild(link);
   });
 }
 
-// Poblar select con opciones
-function populateSelect(selectId, values) {
-  const select = document.getElementById(selectId);
-  values.forEach(val => {
-    const option = document.createElement('option');
-    option.value = val;
-    option.textContent = val;
-    select.appendChild(option);
-  });
-}
-
-// Actualizar subcategorías según categoría
-function updateSubcategories() {
-  const category = document.getElementById('categoryFilter').value;
-  const subcategoryFilter = document.getElementById('subcategoryFilter');
+// Toggle filtro
+function toggleFilter(element) {
+  const filterType = element.dataset.filter;
+  const filterValue = element.dataset.value;
   
-  let subcategories = [];
-  if (category) {
-    subcategories = [...new Set(
-      allProducts
-        .filter(p => p.categoria === category)
-        .map(p => p.subcategoria)
-        .filter(s => s)
-    )].sort();
+  if (element.classList.contains('active')) {
+    element.classList.remove('active');
+    delete activeFilters[filterType + '_' + filterValue];
   } else {
-    subcategories = [...new Set(allProducts.map(p => p.subcategoria).filter(s => s))].sort();
+    element.classList.add('active');
+    activeFilters[filterType + '_' + filterValue] = {type: filterType, value: filterValue};
   }
-  
-  subcategoryFilter.innerHTML = '<option value="">Todas las subcategorías</option>';
-  subcategories.forEach(sub => {
-    const option = document.createElement('option');
-    option.value = sub;
-    option.textContent = sub;
-    subcategoryFilter.appendChild(option);
-  });
-}
-
-// Actualizar modelos de moto según marca
-function updateMotoModels() {
-  const motoBrand = document.getElementById('motoBrandFilter').value;
-  const modelFilter = document.getElementById('motoModelFilter');
-  
-  let models = [];
-  if (motoBrand) {
-    models = [...new Set(
-      allProducts
-        .filter(p => p.marcaMoto === motoBrand)
-        .map(p => p.modeloMoto)
-        .filter(m => m)
-    )].sort();
-  } else {
-    models = [...new Set(allProducts.map(p => p.modeloMoto).filter(m => m))].sort();
-  }
-  
-  modelFilter.innerHTML = '<option value="">Modelo de moto</option>';
-  models.forEach(model => {
-    const option = document.createElement('option');
-    option.value = model;
-    option.textContent = model;
-    modelFilter.appendChild(option);
-  });
-}
-
-// Actualizar años según modelo
-function updateYears() {
-  const motoBrand = document.getElementById('motoBrandFilter').value;
-  const motoModel = document.getElementById('motoModelFilter').value;
-  const yearFilter = document.getElementById('yearFilter');
-  
-  let years = [];
-  if (motoBrand && motoModel) {
-    years = [...new Set(
-      allProducts
-        .filter(p => p.marcaMoto === motoBrand && p.modeloMoto === motoModel)
-        .flatMap(p => {
-          const yearRange = [];
-          if (p.añoDesde) yearRange.push(p.añoDesde);
-          if (p.añoHasta && p.añoHasta !== p.añoDesde) yearRange.push(p.añoHasta);
-          return yearRange;
-        })
-        .filter(y => y)
-    )].sort();
-  } else {
-    years = [...new Set(
-      allProducts.flatMap(p => {
-        const yearRange = [];
-        if (p.añoDesde) yearRange.push(p.añoDesde);
-        if (p.añoHasta && p.añoHasta !== p.añoDesde) yearRange.push(p.añoHasta);
-        return yearRange;
-      }).filter(y => y)
-    )].sort();
-  }
-  
-  yearFilter.innerHTML = '<option value="">Año de aplicación</option>';
-  years.forEach(year => {
-    const option = document.createElement('option');
-    option.value = year;
-    option.textContent = year;
-    yearFilter.appendChild(option);
-  });
-}
-
-// Filtrar productos con búsqueda inteligente
-function filterProducts() {
-  const searchTerm = document.getElementById('search').value.toLowerCase().trim();
-  const category = document.getElementById('categoryFilter').value;
-  const subcategory = document.getElementById('subcategoryFilter').value;
-  const brand = document.getElementById('brandFilter').value;
-  const family = document.getElementById('familyFilter').value;
-  const color = document.getElementById('colorFilter').value;
-  const size = document.getElementById('sizeFilter').value;
-  const terrain = document.getElementById('terrainFilter').value;
-  const stockFilter = document.getElementById('stockFilter').value;
-  const motoBrand = document.getElementById('motoBrandFilter').value;
-  const motoModel = document.getElementById('motoModelFilter').value;
-  const year = document.getElementById('yearFilter').value;
-  
-  // Actualizar filtros dependientes
-  updateSubcategories();
-  updateMotoModels();
-  updateYears();
-  
-  filteredProducts = allProducts.filter(p => {
-    // Búsqueda de texto inteligente
-    if (searchTerm) {
-      const searchTerms = searchTerm.split(' ').filter(t => t.length > 0);
-      const matchesAllTerms = searchTerms.every(term => 
-        p.searchIndex.includes(term)
-      );
-      if (!matchesAllTerms) return false;
-    }
-    
-    // Filtros exactos
-    if (category && p.categoria !== category) return false;
-    if (subcategory && p.subcategoria !== subcategory) return false;
-    if (brand && p.marca !== brand) return false;
-    if (family && p.familia !== family) return false;
-    if (color && p.color !== color) return false;
-    if (size && p.talle !== size) return false;
-    if (terrain && p.terreno !== terrain) return false;
-    
-    // Filtros de compatibilidad
-    if (motoBrand && p.marcaMoto !== motoBrand) return false;
-    if (motoModel && p.modeloMoto !== motoModel) return false;
-    if (year) {
-      const añoDesde = parseInt(p.añoDesde);
-      const añoHasta = parseInt(p.añoHasta);
-      const yearNum = parseInt(year);
-      
-      if (añoDesde && añoHasta) {
-        if (yearNum < añoDesde || yearNum > añoHasta) return false;
-      } else if (añoDesde && yearNum < añoDesde) {
-        return false;
-      }
-    }
-    
-    // Filtro de stock
-    if (stockFilter === 'in' && p.stock <= 0) return false;
-    if (stockFilter === 'low' && (p.stock <= 0 || p.stock > 5)) return false;
-    if (stockFilter === 'out' && p.stock > 0) return false;
-    
-    return true;
-  });
   
   updateActiveFilters();
-  renderProducts();
+  applyFilters();
 }
 
-// Actualizar tags de filtros activos
+// Aplicar filtro directamente
+function applyFilter(type, value) {
+  activeFilters[type + '_' + value] = {type, value};
+  updateActiveFilters();
+  applyFilters();
+}
+
+// Actualizar filtros activos
 function updateActiveFilters() {
-  const filters = {
-    'Categoría': document.getElementById('categoryFilter').value,
-    'Subcategoría': document.getElementById('subcategoryFilter').value,
-    'Marca': document.getElementById('brandFilter').value,
-    'Familia': document.getElementById('familyFilter').value,
-    'Color': document.getElementById('colorFilter').value,
-    'Talle': document.getElementById('sizeFilter').value,
-    'Terreno': document.getElementById('terrainFilter').value,
-    'Marca Moto': document.getElementById('motoBrandFilter').value,
-    'Modelo Moto': document.getElementById('motoModelFilter').value,
-    'Año': document.getElementById('yearFilter').value
-  };
-  
-  const activeFilters = Object.entries(filters).filter(([_, val]) => val);
   const container = document.getElementById('activeFilters');
-  const clearBtn = document.getElementById('clearFiltersBtn');
+  const tags = Object.values(activeFilters);
   
-  if (activeFilters.length === 0) {
-    container.style.display = 'none';
-    clearBtn.style.display = 'none';
+  if (tags.length === 0) {
+    container.innerHTML = '';
     return;
   }
   
-  container.style.display = 'flex';
-  clearBtn.style.display = 'block';
-  
-  container.innerHTML = activeFilters.map(([label, value]) => 
+  container.innerHTML = tags.map((filter, i) => 
     `<div class="active-filter-tag">
-      <span>${label}: ${value}</span>
-      <button onclick="removeFilter('${label}')" title="Quitar filtro">×</button>
+      ${filter.value}
+      <button onclick="removeFilter(${i})">×</button>
     </div>`
   ).join('');
 }
 
-// Remover filtro específico
-function removeFilter(label) {
-  const filterMap = {
-    'Categoría': 'categoryFilter',
-    'Subcategoría': 'subcategoryFilter',
-    'Marca': 'brandFilter',
-    'Familia': 'familyFilter',
-    'Color': 'colorFilter',
-    'Talle': 'sizeFilter',
-    'Terreno': 'terrainFilter',
-    'Marca Moto': 'motoBrandFilter',
-    'Modelo Moto': 'motoModelFilter',
-    'Año': 'yearFilter'
-  };
+// Remover filtro
+function removeFilter(index) {
+  const keys = Object.keys(activeFilters);
+  delete activeFilters[keys[index]];
+  updateActiveFilters();
+  applyFilters();
   
-  if (filterMap[label]) {
-    document.getElementById(filterMap[label]).value = '';
-    filterProducts();
+  // Actualizar chips
+  document.querySelectorAll('.filter-chip').forEach(chip => {
+    const key = chip.dataset.filter + '_' + chip.dataset.value;
+    if (!activeFilters[key]) {
+      chip.classList.remove('active');
+    }
+  });
+}
+
+// Aplicar todos los filtros
+function applyFilters() {
+  const filterValues = Object.values(activeFilters);
+  
+  filteredProducts = allProducts.filter(p => {
+    return filterValues.every(filter => {
+      if (filter.type === 'categoria') return p.categoria === filter.value;
+      if (filter.type === 'marca') return p.marca === filter.value;
+      if (filter.type === 'modeloMoto') return p.modeloMoto.includes(filter.value);
+      if (filter.type === 'color') return p.color === filter.value;
+      return true;
+    });
+  });
+  
+  // Generar filtros dinámicos basados en resultados
+  updateDynamicFilters();
+  renderProducts();
+}
+
+// Actualizar filtros dinámicos
+function updateDynamicFilters() {
+  const container = document.getElementById('dynamicFilters');
+  
+  if (filteredProducts.length === 0) {
+    container.innerHTML = '';
+    return;
   }
-}
-
-// Limpiar todos los filtros
-function clearAllFilters() {
-  document.getElementById('categoryFilter').value = '';
-  document.getElementById('subcategoryFilter').value = '';
-  document.getElementById('brandFilter').value = '';
-  document.getElementById('familyFilter').value = '';
-  document.getElementById('colorFilter').value = '';
-  document.getElementById('sizeFilter').value = '';
-  document.getElementById('terrainFilter').value = '';
-  document.getElementById('stockFilter').value = '';
-  document.getElementById('motoBrandFilter').value = '';
-  document.getElementById('motoModelFilter').value = '';
-  document.getElementById('yearFilter').value = '';
-  document.getElementById('search').value = '';
-  filterProducts();
-}
-
-// Mostrar todos los productos
-function showAll(event) {
-  event.preventDefault();
-  clearAllFilters();
-  updateNavActive(event.target);
-}
-
-// Actualizar estado activo en navegación
-function updateNavActive(activeLink) {
-  document.querySelectorAll('.nav a').forEach(a => a.classList.remove('active'));
-  activeLink.classList.add('active');
+  
+  // Obtener marcas disponibles
+  const brands = [...new Set(filteredProducts.map(p => p.marca).filter(m => m))];
+  
+  // Obtener modelos de moto disponibles
+  const models = [...new Set(filteredProducts.map(p => p.modeloMoto).filter(m => m))];
+  
+  // Obtener colores disponibles
+  const colors = [...new Set(filteredProducts.map(p => p.color).filter(c => c))];
+  
+  let html = '';
+  
+  if (brands.length > 1 && brands.length <= 20) {
+    html += `
+      <div class="filter-section">
+        <span class="filter-label">Marca</span>
+        <div class="filter-row">
+          ${brands.sort().map(brand => 
+            `<div class="filter-chip ${activeFilters['marca_' + brand] ? 'active' : ''}" 
+                  data-filter="marca" data-value="${brand}" onclick="toggleFilter(this)">${brand}</div>`
+          ).join('')}
+        </div>
+      </div>
+    `;
+  }
+  
+  if (models.length > 1 && models.length <= 15) {
+    html += `
+      <div class="filter-section">
+        <span class="filter-label">Modelo de Moto</span>
+        <div class="filter-row">
+          ${models.sort().slice(0, 10).map(model => 
+            `<div class="filter-chip ${activeFilters['modeloMoto_' + model] ? 'active' : ''}" 
+                  data-filter="modeloMoto" data-value="${model}" onclick="toggleFilter(this)">${model}</div>`
+          ).join('')}
+        </div>
+      </div>
+    `;
+  }
+  
+  if (colors.length > 1 && colors.length <= 12) {
+    html += `
+      <div class="filter-section">
+        <span class="filter-label">Color</span>
+        <div class="filter-row">
+          ${colors.sort().map(color => 
+            `<div class="filter-chip ${activeFilters['color_' + color] ? 'active' : ''}" 
+                  data-filter="color" data-value="${color}" onclick="toggleFilter(this)">${color}</div>`
+          ).join('')}
+        </div>
+      </div>
+    `;
+  }
+  
+  container.innerHTML = html;
 }
 
 // Renderizar categorías principales
@@ -792,14 +618,25 @@ function renderCategories() {
   const grid = document.getElementById('categoryGrid');
   
   grid.innerHTML = categories.map(cat => 
-    `<div class="cat" onclick="filterByCategory('${cat}')">${cat}</div>`
+    `<div class="cat" onclick="applyFilter('categoria', '${cat}')">${cat}</div>`
   ).join('');
 }
 
-// Filtrar por categoría
-function filterByCategory(category) {
-  document.getElementById('categoryFilter').value = category;
-  filterProducts();
+// Mostrar todos los productos
+function showAll(event) {
+  event.preventDefault();
+  activeFilters = {};
+  updateActiveFilters();
+  filteredProducts = [...allProducts];
+  updateDynamicFilters();
+  renderProducts();
+  updateNavActive(event.target);
+}
+
+// Actualizar estado activo en navegación
+function updateNavActive(activeLink) {
+  document.querySelectorAll('.nav a').forEach(a => a.classList.remove('active'));
+  activeLink.classList.add('active');
 }
 
 // Renderizar productos
@@ -813,19 +650,19 @@ function renderProducts() {
     return;
   }
   
-  countEl.textContent = `${filteredProducts.length} productos encontrados`;
+  countEl.textContent = `${filteredProducts.length} productos`;
   
   container.innerHTML = filteredProducts.map((p, i) => {
     const stockClass = p.stock === 0 ? 'out-of-stock' : (p.stock <= 5 ? 'low' : '');
     const stockText = p.stock === 0 ? 'SIN STOCK' : (p.stock <= 5 ? `¡Solo ${p.stock} disponibles!` : `Stock: ${p.stock}`);
     
-    // Construir atributos visibles
+    // Generar atributos visibles
     const attrs = [];
-    if (p.color) attrs.push(`Color: ${p.color}`);
-    if (p.talle) attrs.push(`Talle: ${p.talle}`);
-    if (p.material) attrs.push(`Material: ${p.material}`);
-    if (p.terreno) attrs.push(`Terreno: ${p.terreno}`);
-    if (p.aplicacionModelo) attrs.push(`Aplicación: ${p.aplicacionModelo}`);
+    if (p.color) attrs.push(p.color);
+    if (p.talle) attrs.push(p.talle);
+    if (p.medida) attrs.push(p.medida);
+    if (p.rodado) attrs.push(`R${p.rodado}`);
+    if (p.terreno) attrs.push(p.terreno);
     
     return `
       <article class="product">
@@ -838,8 +675,13 @@ function renderProducts() {
         <div class="product-category">${p.categoria} > ${p.subcategoria}</div>
         <h3>${p.producto}</h3>
         <div class="brand-tag">${p.marca}</div>
+        ${attrs.length > 0 ? `
+          <div class="product-attrs">
+            ${attrs.map(attr => `<span class="product-attr">${attr}</span>`).join('')}
+          </div>
+        ` : ''}
         <div class="code">Código: ${p.codigo}</div>
-        ${attrs.length > 0 ? `<div class="product-attrs">${attrs.join(' | ')}</div>` : ''}
+        ${p.modeloMoto ? `<div style="font-size:9px;color:var(--muted);margin-bottom:4px">${p.marcaMoto} ${p.modeloMoto}</div>` : ''}
         <div class="stock-info ${stockClass}">${stockText}</div>
         <div class="price">$ ${money(p.precio)}</div>
         ${p.stock > 0 ? `
@@ -861,56 +703,75 @@ function renderProducts() {
 }
 
 // Búsqueda inteligente con sugerencias
-function showSearchSuggestions() {
+function performSearch() {
   const searchTerm = document.getElementById('search').value.toLowerCase().trim();
-  const suggestionsContainer = document.getElementById('searchSuggestions');
   
-  if (searchTerm.length < 2) {
-    suggestionsContainer.classList.remove('active');
+  if (!searchTerm) {
+    showAll({preventDefault: () => {}, target: document.querySelector('.nav a.active')});
     return;
   }
   
-  const searchTerms = searchTerm.split(' ').filter(t => t.length > 0);
+  // Dividir búsqueda en palabras clave
+  const keywords = searchTerm.split(' ').filter(k => k.length > 0);
+  
+  filteredProducts = allProducts.filter(p => {
+    // Todas las palabras clave deben estar presentes
+    return keywords.every(keyword => p.searchText.includes(keyword));
+  });
+  
+  // Limpiar filtros activos
+  activeFilters = {};
+  updateActiveFilters();
+  
+  // Actualizar filtros dinámicos
+  updateDynamicFilters();
+  renderProducts();
+  
+  // Ocultar sugerencias
+  document.getElementById('searchSuggestions').classList.remove('active');
+}
+
+// Mostrar sugerencias de búsqueda
+function showSearchSuggestions() {
+  const searchTerm = document.getElementById('search').value.toLowerCase().trim();
+  const suggestions = document.getElementById('searchSuggestions');
+  
+  if (searchTerm.length < 2) {
+    suggestions.classList.remove('active');
+    return;
+  }
+  
+  const keywords = searchTerm.split(' ').filter(k => k.length > 0);
+  
   const matches = allProducts.filter(p => {
-    return searchTerms.every(term => p.searchIndex.includes(term));
+    return keywords.every(keyword => p.searchText.includes(keyword));
   }).slice(0, 8);
   
   if (matches.length === 0) {
-    suggestionsContainer.classList.remove('active');
-    return;
+    suggestions.innerHTML = '<div class="suggestion-item"><div class="suggestion-title">No se encontraron resultados</div></div>';
+  } else {
+    suggestions.innerHTML = matches.map(p => `
+      <div class="suggestion-item" onclick="selectSuggestion('${p.codigo}')">
+        <div class="suggestion-title">${p.producto}</div>
+        <div class="suggestion-meta">${p.marca} · ${p.codigo} · $${money(p.precio)}</div>
+      </div>
+    `).join('');
   }
   
-  suggestionsContainer.innerHTML = matches.map(p => {
-    const highlightText = (text) => {
-      let result = text;
-      searchTerms.forEach(term => {
-        const regex = new RegExp(`(${term})`, 'gi');
-        result = result.replace(regex, '<span class="suggestion-match">$1</span>');
-      });
-      return result;
-    };
-    
-    return `
-      <div class="suggestion-item" onclick="selectSuggestion('${p.codigo}')">
-        <div class="suggestion-title">${highlightText(p.producto)}</div>
-        <div class="suggestion-meta">
-          ${p.marca} | ${p.codigo} | $${money(p.precio)}
-          ${p.color ? ` | Color: ${p.color}` : ''}
-        </div>
-      </div>
-    `;
-  }).join('');
-  
-  suggestionsContainer.classList.add('active');
+  suggestions.classList.add('active');
 }
 
 // Seleccionar sugerencia
 function selectSuggestion(code) {
   const product = allProducts.find(p => p.codigo === code);
   if (product) {
-    document.getElementById('search').value = product.producto;
+    filteredProducts = [product];
+    activeFilters = {};
+    updateActiveFilters();
+    updateDynamicFilters();
+    renderProducts();
+    document.getElementById('search').value = '';
     document.getElementById('searchSuggestions').classList.remove('active');
-    filterProducts();
   }
 }
 
@@ -1042,9 +903,7 @@ function completePurchase() {
     message += `\n${i + 1}. ${item.producto}\n`;
     message += `   Código: ${item.codigo}\n`;
     message += `   Marca: ${item.marca}\n`;
-    message += `   Categoría: ${item.categoria} > ${item.subcategoria}\n`;
-    if (item.color) message += `   Color: ${item.color}\n`;
-    if (item.talle) message += `   Talle: ${item.talle}\n`;
+    if (item.modeloMoto) message += `   Compatible: ${item.marcaMoto} ${item.modeloMoto}\n`;
     message += `   Cantidad: ${item.qty}\n`;
     message += `   Precio unitario: $${money(item.precio)}\n`;
     message += `   Subtotal: $${money(item.precio * item.qty)}\n`;
@@ -1056,10 +915,12 @@ function completePurchase() {
   const whatsappUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
   window.open(whatsappUrl, '_blank');
   
+  // Limpiar carrito
   cart = [];
   renderCart();
   toggleCart();
   
+  // Limpiar formulario
   document.getElementById('customerName').value = '';
   document.getElementById('customerCity').value = '';
   document.getElementById('customerAddress').value = '';
@@ -1079,32 +940,20 @@ function toggleCart() {
 }
 
 // Event listeners
-document.getElementById('search').addEventListener('input', e => {
-  clearTimeout(searchTimeout);
-  searchTimeout = setTimeout(() => {
-    showSearchSuggestions();
-    if (e.target.value.length >= 2) {
-      filterProducts();
-    }
-  }, 300);
-});
-
-document.getElementById('search').addEventListener('keydown', e => {
+document.getElementById('search').addEventListener('keyup', e => {
   if (e.key === 'Enter') {
-    document.getElementById('searchSuggestions').classList.remove('active');
-    filterProducts();
+    performSearch();
+  } else {
+    clearTimeout(window.searchTimeout);
+    window.searchTimeout = setTimeout(showSearchSuggestions, 200);
   }
 });
 
-document.getElementById('search').addEventListener('blur', () => {
-  setTimeout(() => {
-    document.getElementById('searchSuggestions').classList.remove('active');
-  }, 200);
-});
+document.getElementById('search').addEventListener('focus', showSearchSuggestions);
 
-document.getElementById('search').addEventListener('focus', () => {
-  if (document.getElementById('search').value.length >= 2) {
-    showSearchSuggestions();
+document.addEventListener('click', e => {
+  if (!e.target.closest('.search')) {
+    document.getElementById('searchSuggestions').classList.remove('active');
   }
 });
 
